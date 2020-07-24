@@ -11,7 +11,9 @@
         "stm32l0xx_hal.h": "c",
         "stm32l0xx_hal_conf.h": "c",
         "stdio.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "cstdio": "c",
+        "algorithm": "c"
     },
     "git.ignoreLimitWarning": true,
     "files.defaultLanguage": "c", // ctrl+N新建文件后默认的语言
@@ -44,5 +46,30 @@
         "-std=c++17",
         "-Wall"
     ],
-    "clang.completion.enable":true // 效果效果比cpptools要好
+    "clang.completion.enable": true,
+    "MicroPython.executeButton": [
+        {
+            "text": "▶",
+            "tooltip": "运行",
+            "alignment": "left",
+            "command": "extension.executeFile",
+            "priority": 3.5
+        }
+    ],
+    "MicroPython.syncButton": [
+        {
+            "text": "$(sync)",
+            "tooltip": "同步",
+            "alignment": "left",
+            "command": "extension.execute",
+            "priority": 4
+        }
+    ],
+    "python.autoComplete.extraPaths": [
+        "C:/Users/wanglei/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.7/microExamples/code-completion"
+    ],
+    "python.linting.pylintArgs": [
+        "--init-hook",
+        "import sys; sys.path.append('C:/Users/wanglei/.vscode/extensions/rt-thread.rt-thread-micropython-1.0.7/microExamples/code-completion')"
+    ] // 效果效果比cpptools要好
 }

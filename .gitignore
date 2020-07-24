@@ -53,3 +53,5 @@ dkms.conf
 
 # My Configuration
 /.vscode/ipch
+*.i
+*.s

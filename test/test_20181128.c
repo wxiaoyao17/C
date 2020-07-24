@@ -16,8 +16,8 @@ int main(void)
     // char *family_name = "xyz";
 
     /* 指针在使用的时候要初始化，给一个有效可用的地址进行存储 */
-    // given_name = (char*)malloc(10);
-    // family_name = (char*)malloc(10);
+    given_name = (char*)malloc(10);
+    family_name = (char*)malloc(10);
 
     printf("please enter your given_name:\n");
     scanf("%s", given_name);
